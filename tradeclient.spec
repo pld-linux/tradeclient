@@ -58,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Office/PIMs/*
 %{_pixmapsdir}/*
 # there are no files here yet
-##%{_datadir}/*
+#%%{_datadir}/*
