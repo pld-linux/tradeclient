@@ -11,7 +11,7 @@ Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
 Group(pt_BR):	X11/Aplicações
 Group(pt):	X11/Aplicações
-Source0:	http://ftp.bynari.net/ftp/TradeClient/%{version}/TradeClient-%{version}_Source_any.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}-%{version}-%{subver}.tar.gz
 URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	gtk+-devel
