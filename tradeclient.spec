@@ -5,7 +5,7 @@ Version:	0.9.0
 Release:	1
 License:	LGPL
 Group:		X11/Applications
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-include_time_h.patch
@@ -14,7 +14,6 @@ URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
 BuildRequires:	gtk+-devel
 BuildRequires:	openldap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Messaging and Personal Information Management Tool for Linux and UNIX.
@@ -30,7 +29,7 @@ gzip -dc imap-4.7c.tar.Z | tar xfv -
 
 %build
 # Set the "right" optflags
-perl -pi -e 's|^(\s*CFLAGS\+=)-m486|$1%{optflags}|' Makefile
+perl -pi -e 's|^(\s*CFLAGS\+=)-m486|$1%{rpmcflags}|' Makefile
 
 %{__make} \
 	prefix=%{_prefix}
