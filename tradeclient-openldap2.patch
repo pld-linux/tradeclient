@@ -1,0 +1,15 @@
+*** src/tcldap.c.original	Thu Dec 13 06:25:05 2001
+--- src/tcldap.c	Thu Dec 13 06:25:35 2001
+***************
+*** 344,350 ****
+--- 344,353 ----
+      searchfor = strdup (search);
+  
+    /* Disable any client side size restrictions while being extra paranoid! */
++ /* OpenLDAP 2 does not want this anymore */
++ #if (LDAP_API_VERSION+0 < 2000)
+    ld -> ld_sizelimit = 0 ;
++ #endif
+    retcode = ldap_search_s (ld, basedn, LDAP_SCOPE_SUBTREE, searchfor, NULL, 0, &res);
+    if( (retcode != LDAP_SUCCESS) &&
+        (retcode != LDAP_SIZELIMIT_EXCEEDED) &&
