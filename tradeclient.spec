@@ -14,6 +14,7 @@ Patch1:		%{name}-openldap2.patch
 URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
 BuildRequires:	gtk+-devel
 BuildRequires:	openldap-devel
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
