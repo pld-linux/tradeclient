@@ -6,7 +6,11 @@ Version:	0.7.1
 Release:	1
 License:	LGPL
 Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Source0:	http://ftp.bynari.net/ftp/TradeClient/%{version}/TradeClient-%{version}_Source_any.tar.gz
 URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -15,23 +19,23 @@ BuildRequires:	gtk+-devel
 %define		_prefix		/usr/X11R6
 
 %description
-Messaging and Personal Information Management Tool 
-for Linux and UNIX
+Messaging and Personal Information Management Tool for Linux and UNIX.
 
 %description -l pl
+Program pocztowy oraz PIM (zarz±dzanie informacjami) dla Linuksa.
 
 %prep
 %setup -q -n %{name}-%{version}-%{subver}
 
 %build
 %{__make} \
-	prefix=%{_prefix} 	\
+	prefix=%{_prefix}
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_datadir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}
+
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} 	\
 	DOCINSTALLDIR="" 			\
