@@ -1,0 +1,22 @@
+diff -urN aaa/tradeclient-0.9.0/imap-4.7c/src/osdep/unix/env_unix.c tradeclient-0.9.0/imap-4.7c/src/osdep/unix/env_unix.c
+--- aaa/tradeclient-0.9.0/imap-4.7c/src/osdep/unix/env_unix.c	Wed May  3 19:33:01 2000
++++ tradeclient-0.9.0/imap-4.7c/src/osdep/unix/env_unix.c	Sun Jan  5 18:01:30 2003
+@@ -35,6 +35,7 @@
+ 
+ #include <signal.h>
+ #include <sys/wait.h>
++#include <time.h>
+ #include "write.c"		/* include safe writing routines */
+ 
+ /* Get all authenticators */
+diff -urN aaa/tradeclient-0.9.0/imap-4.7c/src/osdep/unix/os_slx.h tradeclient-0.9.0/imap-4.7c/src/osdep/unix/os_slx.h
+--- aaa/tradeclient-0.9.0/imap-4.7c/src/osdep/unix/os_slx.h	Wed Apr 30 01:16:20 1997
++++ tradeclient-0.9.0/imap-4.7c/src/osdep/unix/os_slx.h	Sun Jan  5 17:45:57 2003
+@@ -41,6 +41,7 @@
+ #include <fcntl.h>
+ #include <syslog.h>
+ #include <sys/file.h>
++#include <time.h>
+ 
+ 
+ /* Linux gets this wrong */
