@@ -7,7 +7,7 @@ License:	LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Source2:	%{name}.xpm
+Source2:	%{name}.png
 Patch0:		%{name}-include_time_h.patch
 Patch1:		%{name}-openldap2.patch
 URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
