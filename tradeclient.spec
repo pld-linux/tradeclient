@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	365d4f0029cc43ecc9a47c2a5a28ac17
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-include_time_h.patch
