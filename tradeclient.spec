@@ -1,0 +1,49 @@
+Summary:	TradeClient - Messaging and PIM Client (Gtk+)
+Summary(pl):	TradeClient - program pocztowy oraz PIM (Gtk+)
+Name:		tradeclient
+Version:	0.7.1
+%define		subver 1
+Release:	1
+License:	LGPL
+Group:		X11/Applications
+Group(pl):	X11/Aplikacje
+Source0:	http://ftp.bynari.net/ftp/TradeClient/%{version}/TradeClient-%{version}_Source_any.tar.gz
+URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	gtk+-devel
+
+%define		_prefix		/usr/X11R6
+
+%description
+Messaging and Personal Information Management Tool 
+for Linux and UNIX
+
+%description -l pl
+
+%prep
+%setup -q -n %{name}-%{version}-%{subver}
+
+%build
+%{__make} \
+	prefix=%{_prefix} 	\
+
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_datadir}
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} 	\
+	DOCINSTALLDIR="" 			\
+
+gzip -9nf README CHANGELOG
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_bindir}/*
+# there are no files here yet
+##%{_datadir}/*
