@@ -40,7 +40,7 @@ perl -pi -e 's|^(\s*CFLAGS\+=)-m486|$1%{rpmcflags}|' Makefile
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir},%{_applnkdir}/Office/PIMs} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}
-	
+
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	DOCINSTALLDIR=""
