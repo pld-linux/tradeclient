@@ -15,7 +15,6 @@ BuildRequires:	gtk+-devel
 BuildRequires:	openldap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Messaging and Personal Information Management Tool for Linux and UNIX.
