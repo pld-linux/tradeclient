@@ -1,0 +1,6 @@
+- updated to 0.9.0
+- added include_time_h patch
+- added openldap2 patch (from MDK)
+- added desktop file and icon
+- added BR: openldap-devel
+- cosmetics
