@@ -6,11 +6,6 @@ Version:	0.7.1
 Release:	1
 License:	LGPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}-%{subver}.tar.gz
 URL:		http://www.bynari.net/News___Events/Products/tradeclient/tradeclient.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
