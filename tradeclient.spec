@@ -1,5 +1,5 @@
 Summary:	TradeClient - Messaging and PIM Client (Gtk+)
-Summary(pl.UTF-8):   TradeClient - program pocztowy oraz PIM (Gtk+)
+Summary(pl.UTF-8):	TradeClient - program pocztowy oraz PIM (Gtk+)
 Name:		tradeclient
 Version:	0.9.0
 Release:	1
