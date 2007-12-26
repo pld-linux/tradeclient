@@ -1,10 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=TradeClient
 Comment=Messaging and PIM Client
 Comment[pl]=Program pocztowy oraz PIM 
 Exec=tradeclient
 Terminal=false
-Icon=tradeclient.png
+Icon=tradeclient
 Type=Application
 # vi: encoding=utf-8
