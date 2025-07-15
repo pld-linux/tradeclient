@@ -26,8 +26,8 @@ Program pocztowy oraz PIM (zarządzanie informacjami) dla Linuksa.
 %prep
 %setup -q
 gzip -dc imap-4.7c.tar.Z | tar xfv -
-%patch0 -p1
-%patch1 -p0
+%patch -P0 -p1
+%patch -P1 -p0
 
 %build
 # Set the "right" optflags
